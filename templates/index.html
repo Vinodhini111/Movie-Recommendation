@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>🎬 CineMatch AI</h1>
+        <p>Enter a movie you enjoyed, and we'll predict what you should watch next.</p>
+
+        <div class="input-group">
+            <input type="text" id="movieInput" placeholder="Enter movie name (e.g. Avatar)...">
+            <button onclick="getRecommendations()">Get Recommendations</button>
+        </div>
+
+        <div id="loader" class="loader hidden"></div>
+
+        <div id="results" class="results-grid">
+            </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
